@@ -20,9 +20,9 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textToEncrypt">Text to encrypt</label>
+  <label class="col-md-4 control-label" for="firstInput">Text to encrypt</label>
   <div class="col-md-4">
-  <input id="textToEncrypt" name="textToEncrypt" type="text" class="form-control input-md" onkeyup="sync()">
+  <input id="firstInput" name="textToEncrypt" type="text" class="form-control input-md" onkeyup="syncFirst()">
 
   </div>
 </div>
@@ -31,7 +31,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Key">Key</label>
   <div class="col-md-2">
-    <select id="key" name="key" class="form-control" onchange="sync()">
+    <select id="key" name="key" class="form-control" onchange="syncFirst(),syncSecond()">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -67,15 +67,15 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="encrypted">Encrypted Text</label>
+  <label class="col-md-4 control-label" for="secondInput">Encrypted Text</label>
   <div class="col-md-4">
-  <input id="encrypted" name="encrypted" type="text" placeholder="" class="form-control input-md">
+  <input id="secondInput" name="encrypted" type="text" placeholder="" class="form-control input-md" onkeyup="syncSecond()">
   <br>
   </div>
 </div>
 
 
-<label class="col-md-5 col-md-offset-8 details">JavaScript Algorithm, <a href="https://pastebin.com/nQHB4tDv">here.</a></label>
+<label class="col-md-5 col-md-offset-8 details">JavaScript Algorithm, <a href="https://pastebin.com/q6yKzC1h">here.</a></label>
 <label class="col-md-4 col-md-offset-8 details">David Sazdovski 3564</label>
 
 
