@@ -3,22 +3,17 @@ function syncFirst()
 {
     var n1 = document.getElementById('firstInput');
     var n2 = document.getElementById('secondInput');
-    //Get value from dropdown
-    var selectedDropdown = document.getElementById("key");
-    var key = selectedDropdown.options[selectedDropdown.selectedIndex].value;
 
-    n2.value = caesarEncrypt(n1.value,key);
+
+    n2.value = caesarEncrypt(n1.value,35);
 }
 
 function syncSecond(){
 
     var n1 = document.getElementById('firstInput');
     var n2 = document.getElementById('secondInput');
-    //Get value from dropdown
-    var selectedDropdown = document.getElementById("key");
-    var key = selectedDropdown.options[selectedDropdown.selectedIndex].value;
 
-    n1.value = caesarDecrypt(n2.value,key);
+    n1.value = caesarDecrypt(n2.value,35);
 }
 
 
