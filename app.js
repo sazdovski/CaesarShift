@@ -47,7 +47,6 @@ function caesarEncrypt(str, amount) {
     }
 
 
-
 function caesarDecrypt(str, amount) {
 
     var output = '';
@@ -62,7 +61,7 @@ function caesarDecrypt(str, amount) {
 
         // Decrypting
         if ((asciiValue >= 32) && (asciiValue <= 126))
-            current = String.fromCharCode((((asciiValue - 32) - parseInt(amount)) % 95) + 32);
+            current = String.fromCharCode((((asciiValue + 32) - parseInt(amount)) % 95) + 32);
 
         else {
             output = "Wrong Input";
